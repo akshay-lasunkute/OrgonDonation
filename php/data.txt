@@ -1,0 +1,25 @@
+create table donor(id bigint primary key,name varchar(30),bdate date,address varchar(60),mobnum bigint,gender varchar(10),blood varchar(10));
+
+ create table organ(id bigint primary key,foreign key(id) references donor(id),heart int,eye int,kidney int,lungs int,pancreas int,skin int,liver int);
+
+
+ create table finaldonor(id bigint primary key,name varchar(30),bdate date,address varchar(60),mobnum bigint,gender varchar(10),blood varchar(10));
+
+
+ create table recipient(id bigint primary key,name varchar(30),bdate date,address varchar(60),mobnum bigint,gender varchar(10),blood varchar(10),organ varchar(10));
+
+ create table staff(name varchar(30),bdate date,mobile bigint,address varchar(70),id bigint primary key,gender varchar(10),designation varchar(30));
+
+ create table lastone(id bigint);
+
+
+ create table admin(id bigint primary key,pass varchar(20),foreign key (id) references staff(id));
+
+
+
+ create table hospital (hospid varchar(20) primary key,name varchar(30),address varchar(70),city varchar(15),district varchar(15),state varchar(20),pincode bigint,mobile bigint);
+
+
+ create table doctor (hospid varchar(20),doctorid bigint,name varchar(30),mobile bigint,foreign key (hospid) references hospital(hospid),primary key(hospid,doctorid));
+
+ 

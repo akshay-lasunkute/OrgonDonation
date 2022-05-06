@@ -1,0 +1,31 @@
+#newstaffregmeta label
+{
+    margin-top: 15px;
+}
+
+#newstaffreginfo input
+{
+    width: 250px;
+    margin-top: 15px;
+}
+
+#SubmitButton
+{
+    margin-left: -130px;
+}
+
+#newstaffregmeta
+{
+    float: left;
+    margin-left: 40px;
+}
+
+#newstaffreginfo
+{
+    float: left;
+    margin-left: 40px;
+}
+
+
+
+
